@@ -15,12 +15,20 @@ const validate = values => {
 
     if (!values.password) {
         errors.password = 'Password Required';
-    } else if (values.password.length < 6) {
-        errors.password = 'Must be 6 characters at less';
-    }else if ( !/^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/.test(values.password)){
+    } else if (values.password.length < 8) {
+        errors.password = 'Must be 8 characters at less';
+
+
+    }else if ( !/^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[@$!%*?&_¿¡])[A-Za-z\d@$!%*?&_¿¡]{8,}$/.test(values.password)){
+        // (?=.*[A-Z]): Al menos una letra mayúscula]
+        // (?=.*[a-z]): Al menos una letra minúscula.
+        // (?=.*\d): Al menos un dígito.
+        // (?=.*[@$!%*?&])
+        // [A-Za-z\d@$!%*?&]{8,}
+        // $: Coincide con el final de la cadena.
         errors.password = 'Password is too Weak';
     }
-    console.log(errors.password);
+    // console.log(errors.password);
     return errors;
 };
 
@@ -33,7 +41,7 @@ function SignUpForm() {
         },
         validate,
         onSubmit: values => {
-            console.log(values.email)
+            console.log(values.email,values.password)
         },
     });
 
@@ -53,7 +61,7 @@ function SignUpForm() {
             <input
                 id="password"
                 name="password"
-                type="password"
+                type="text"
                 onChange={formik.handleChange}
                 value={formik.values.password}
             />
