@@ -10,17 +10,7 @@ export const validate = values => {
     if (!values.password) {
         errors.password = 'Password Required';
     } else if (values.password.length < 8) {
-        errors.password = 'Choose a more difficult password. Use a combination of letters,numbers and signs that you can remember.';
-
-
-    }else if ( !/^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[@$!%*?&_¿¡])[A-Za-z\d@$!%*?&_¿¡]{8,}$/.test(values.password)){
-        // (?=.*[A-Z]): Al menos una letra mayúscula]
-        // (?=.*[a-z]): Al menos una letra minúscula.
-        // (?=.*\d): Al menos un dígito.
-        // (?=.*[@$!%*?&])
-        // [A-Za-z\d@$!%*?&]{8,}
-        // $: Coincide con el final de la cadena.
-        errors.password = 'Password is too Weak';
+        errors.password = 'Password must be at least 8 characters';
     }
     // console.log(errors.password);
     return errors;

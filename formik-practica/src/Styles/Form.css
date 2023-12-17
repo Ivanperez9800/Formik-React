@@ -1,0 +1,97 @@
+*{
+    margin: 0;
+    padding: 0;
+    /* height: 100vh; */
+}
+
+
+.main-card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title-form{
+    font-size: 2.8em;
+    /* text-align: center; */
+    margin-bottom: 10px;
+    font-weight: 500;
+    margin-left: 5px;
+}
+
+
+.input-group {
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group .error{
+    color: red;
+    margin-left: 5px;
+    margin-top:5px ;
+}
+
+.input-group input{
+    padding: 10px;
+    font-size: 1.3em;
+    border: 1px solid rgba(29, 83, 29, 0.74);
+    border-radius: 10px;
+    padding-right:40px;
+}
+
+.button-group{
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.button-group button{
+    font-size: 1.2em;
+    padding: 5px;
+    border: 1px solid rgb(15, 63, 19);
+    border-radius:10px;
+    width: 100%;
+    background-color: rgba(255, 166, 0, 0.719);
+    color: rgb(2, 21, 126);
+}
+
+.button-group button:hover{
+    cursor: pointer;
+}
+
+.button-group p{
+    text-align: justify;
+    margin-left: 5px;
+    margin-top: 5px;
+    font-size: 1.1em;
+}
+
+.button-group a{
+    text-decoration: none;
+    color: green;
+    margin-left: 5px;
+    font-size: 1.2em;
+}
+
+/*---------------------------------------*/
+
+
+  
+  .password-input-container {
+    position: relative;
+  }
+    
+  button.show {
+    position: absolute;
+    top: 50%;
+    right: 10px; /* Ajusta el valor según tus necesidades */
+    transform: translateY(-50%);
+    /* Otros estilos del botón */
+    border: none;
+    background-color: white;
+  }
+
+  button:hover.show{
+    cursor: pointer;
+  }
