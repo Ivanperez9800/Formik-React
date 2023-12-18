@@ -61,7 +61,7 @@ function SignUpForm() {
 
         <div className='main-card'>
             <div className='banner-card'>
-                <img src="./Register-banner-photo.jpg" alt="cv image" width="580px" />
+                <img src="./vecteezy_vector-concept-illustration-specialists-choosing-best_7938811.jpg" alt="cv image" width="580px" />
             </div>
             <div className='form-card'>
 
