@@ -111,7 +111,7 @@ function SignUpForm() {
                     <div className="button-group">
                         <button type='submit' disabled={formik.isSubmitting}>Sign Up</button>
                         
-                        <p>Do you have an account?<Link to ="/Login">Login Here</Link> </p>
+                        <p>Do you have an account?<Link to ="/login">Login Here</Link> </p>
                     </div>
                 </form>
             </div>
