@@ -12,8 +12,8 @@ function App() {
       <BrowserRouter>
 
         <Routes>
-          <Route path="/Login" element={<LogInForm />} />
-          <Route path="/Register" element={<SignUpForm />} />
+          <Route path="/login" element={<LogInForm />} />
+          <Route path="/register" element={<SignUpForm />} />
           {/* La siguiente línea establece "/Login" como la página inicial */}
           <Route index element={<LogInForm />} />
         </Routes>
