@@ -1,13 +1,14 @@
 /* FORMULARIO DE REGISTRO */
 import { useFormik } from 'formik';
 
-import { validate } from '../Validation';
+import { Link } from 'react-router-dom';
+
 import { useState } from 'react';
 
-
+import { validate } from '../Validation';
 
 import '../Styles/Form.css';
-import { Link } from 'react-router-dom';
+
 
 /*FUNCION CUSTOMIZADA PARA VALIDAR DATOS */
 
@@ -21,7 +22,7 @@ function SignUpForm() {
         validate,
         onSubmit: values => {
             /*Aca mandar a firebase*/
-            console.log(values.email)
+            console.log(values.email,values.password)
         },
     });
 
@@ -33,31 +34,6 @@ function SignUpForm() {
     }
 
     return (
-        // <form onSubmit={formik.handleSubmit} >
-        //     <label htmlFor="email">Email</label>
-        //     <input
-        //         id="email"
-        //         name="email"
-        //         type="text"
-        //         onChange={formik.handleChange}
-        //         value={formik.values.email}
-        //         autoComplete="off"
-        //     />
-        //     {formik.errors.email ? <div>{formik.errors.email}</div> : null}
-
-        //     <label htmlFor="email">Password</label>
-        //     <input
-        //         id="password"
-        //         name="password"
-        //         type="password"
-        //         onChange={formik.handleChange}
-        //         value={formik.values.password}
-        //         autoComplete="off"
-        //     />
-        //     {formik.errors.password ? <div>{formik.errors.password}</div> : null}
-
-        //     <button type="submit">Submit</button>
-        // </form>
 
         <div className='main-card'>
             <div className='banner-card'>
