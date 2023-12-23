@@ -55,6 +55,9 @@ function LogInForm() {
   const handleShowPassword = () => {
     setShow(!show);
   }
+  const handleInputFocus = () => {
+    setError('');
+  };
 
   // const handleSubmit = (e) => {
   //   e.preventDefault();
@@ -84,6 +87,7 @@ function LogInForm() {
               name='email'
               onChange={formik.handleChange}
               value={formik.values.email || ''}
+              onFocus={handleInputFocus} 
               autoComplete='off'
               aria-label='email'
             />
@@ -100,6 +104,7 @@ function LogInForm() {
                   placeholder='***********'
                   onChange={formik.handleChange}
                   value={formik.values.password || ''}
+                  onFocus={handleInputFocus} 
                   autoComplete='off'
                   aria-label='password'
                 />
