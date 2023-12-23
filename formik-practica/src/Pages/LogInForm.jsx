@@ -6,10 +6,15 @@ import { validate } from '../Validation';
 
 import '../Styles/Form.css';
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import { useAuth } from '../contexts/UseAuth';
 
 
 function LogInForm() {
+
+  const { login } = useAuth();
+  const navigate = useNavigate();
+
 
   const formik = useFormik({
     initialValues: {
@@ -17,12 +22,25 @@ function LogInForm() {
       password: ''
     },
     validate,
-    onSubmit: values => {
-      console.log(values.email)
+    onSubmit: async values => {
+      const { email, password } = values;
+      // console.log(values.email)
+
+
+      try {
+
+        await login(email, password);
+        navigate('/');
+      } catch (e) {
+        console.log(e)
+    }
+
     },
   });
 
   const [show, setShow] = useState(false);
+
+  const cantErrors = Object.keys(formik.errors).length > 0;
 
   const handleShowPassword = () => {
     setShow(!show);
@@ -83,7 +101,7 @@ function LogInForm() {
             {formik.errors.password ? <p className='error' >{formik.errors.password}</p> : null}
           </div>
           <div className="button-group">
-            <button type='submit' disabled={formik.isSubmitting}>Log In</button>
+            <button type='submit'  disabled={cantErrors} className={!cantErrors ? "submit" : ""}  >Log In</button>
             <p>Do you have an account?<Link to ="/register">Sign Up Here</Link> </p>
           </div>
         </form>

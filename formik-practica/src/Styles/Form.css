@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0;
     padding: 0;
     /* height: 100vh; */
@@ -6,13 +6,13 @@
 }
 
 
-.main-card{
+.main-card {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.title-form{
+.title-form {
     font-size: 2.8em;
     /* text-align: center; */
     margin-bottom: 10px;
@@ -21,7 +21,7 @@
 }
 
 
-.banner-card{
+.banner-card {
     display: flex;
     justify-content: center;
     height: 100vh;
@@ -34,95 +34,101 @@
     flex-direction: column;
 }
 
-.input-group .error{
+.input-group .error {
     color: red;
     margin-left: 5px;
-    margin-top:5px ;
+    margin-top: 5px;
 }
 
-.input-group input{
+.input-group input {
     padding: 10px;
     font-size: 1.3em;
     border: 1px solid rgba(29, 83, 29, 0.74);
     border-radius: 10px;
-    padding-right:50px;
+    padding-right: 50px;
 }
 
-.button-group{
+.button-group {
     width: 100%;
     text-align: center;
     margin-top: 20px;
 }
 
-.button-group button{
+.button-group button {
     font-size: 1.2em;
     padding: 5px;
     border: 1px solid rgb(15, 63, 19);
-    border-radius:10px;
+    border-radius: 10px;
     width: 100%;
     background-color: rgba(255, 166, 0, 0.719);
     color: rgb(2, 21, 126);
 }
 
-.button-group button:hover{
+.button-group button:hover {
     cursor: pointer;
 }
 
-.button-group p{
+.button-group p {
     text-align: justify;
     margin-left: 5px;
     margin-top: 5px;
     font-size: 1.1em;
 }
 
-.button-group a{
+.button-group a {
     text-decoration: none;
     color: green;
     margin-left: 5px;
     font-size: 1.2em;
 }
 
+.button-group button:disabled {
+    background-color: #c0c0c0; /* Cambia el color de fondo cuando está desactivado */
+    opacity: 0.8; /* Reduce la opacidad cuando está desactivado */
+    cursor: not-allowed; /* Cambia el cursor a "no permitido" cuando está desactivado */
+}
 /*---------------------------------------*/
 
 
-  
-  .password-input-container {
+
+.password-input-container {
     position: relative;
-  }
-    
-  button.show {
+}
+
+button.show {
     position: absolute;
     top: 50%;
-    right: 10px; /* Ajusta el valor según tus necesidades */
+    right: 10px;
+    /* Ajusta el valor según tus necesidades */
     transform: translateY(-50%);
     /* Otros estilos del botón */
     border: none;
     background-color: white;
-  }
+}
 
-  button:hover.show{
+button:hover.show {
     cursor: pointer;
-  }
+}
 
 
-  @media only screen and (max-width: 767px) {
-    .banner-card{
+@media only screen and (max-width: 767px) {
+    .banner-card {
         display: none;
         /* background-color: red; */
     }
 
-    .title-form{
+    .title-form {
         text-align: center;
     }
 
-    .main-card{
+    .main-card {
         height: 100vh;
     }
-    .form-card{
+
+    .form-card {
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
     }
 }
-

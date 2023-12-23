@@ -2,17 +2,24 @@
 import { useFormik } from 'formik';
 
 import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 import { useState } from 'react';
+
 
 import { validate } from '../Validation';
 
 import '../Styles/Form.css';
+import { useAuth } from '../contexts/UseAuth';
 
 
 /*FUNCION CUSTOMIZADA PARA VALIDAR DATOS */
 
 function SignUpForm() {
+
+
+    const navigate = useNavigate();
+    const { signUp } = useAuth();
 
     const formik = useFormik({
         initialValues: {
@@ -20,18 +27,34 @@ function SignUpForm() {
             password: ''
         },
         validate,
-        onSubmit: values => {
+        onSubmit: async values =>  {
             /*Aca mandar a firebase*/
-            console.log(values.email,values.password)
+            const {email, password} = values
+            // console.log(email,password)
+
+            try {
+
+                await signUp(email, password);
+                navigate('/');
+              } catch (e) {
+
+                console.log(e);
+                // setError('')
+              }
+
         },
     });
 
 
     const [show, setShow] = useState(false);
 
+    const cantErrors = Object.keys(formik.errors).length > 0;
+
     const handleShowPassword = () => {
         setShow(!show);
     }
+
+
 
     return (
 
@@ -85,9 +108,9 @@ function SignUpForm() {
                         {formik.errors.password ? <p className='error' >{formik.errors.password}</p> : null}
                     </div>
                     <div className="button-group">
-                        <button type='submit' disabled={formik.isSubmitting}>Sign Up</button>
-                        
-                        <p>Do you have an account?<Link to ="/login">Login Here</Link> </p>
+                        <button type='submit' disabled={cantErrors} className={!cantErrors ? "submit" : ""}   >Sign Up</button>
+
+                        <p>Do you have an account?<Link to="/login">Login Here</Link> </p>
                     </div>
                 </form>
             </div>
