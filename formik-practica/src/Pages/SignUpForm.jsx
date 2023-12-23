@@ -20,6 +20,7 @@ function SignUpForm() {
 
     const navigate = useNavigate();
     const { signUp } = useAuth();
+    const [error, setError] = useState('');
 
     const formik = useFormik({
         initialValues: {
@@ -27,20 +28,18 @@ function SignUpForm() {
             password: ''
         },
         validate,
-        onSubmit: async values =>  {
+        onSubmit: async values => {
             /*Aca mandar a firebase*/
-            const {email, password} = values
+            const { email, password } = values
             // console.log(email,password)
-
             try {
-
                 await signUp(email, password);
                 navigate('/');
-              } catch (e) {
-
-                console.log(e);
-                // setError('')
-              }
+            } catch (e) {
+                if (e.code === 'auth/email-already-in-use') {
+                    setError('Email already in use')
+                }
+            }
 
         },
     });
@@ -66,6 +65,14 @@ function SignUpForm() {
 
                 <h1 className='title-form' >Register</h1>
                 <form onSubmit={formik.handleSubmit} >
+
+                    {
+                        error &&
+                        <div className="error-firebase">
+                            <p>{error}</p>
+                        </div>
+                    }
+
 
                     <div className="input-group">
                         <input type="text"

@@ -111,6 +111,23 @@ button:hover.show {
 }
 
 
+/*ESTILOS ERROR FIREBASE*/
+
+.error-firebase{
+    background-color: red;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 5px;
+    color: white;
+    font-size: 1.2em;
+    text-align: center;
+    font-weight: 500;
+    /* font-family:Verdana, Geneva, Tahoma, sans-serif; */
+}
+
+
+
+/*ESTILOS RESPONSIVE*/
 @media only screen and (max-width: 767px) {
     .banner-card {
         display: none;
@@ -132,3 +149,5 @@ button:hover.show {
         flex-direction: column;
     }
 }
+
+

@@ -15,6 +15,7 @@ function LogInForm() {
   const { login } = useAuth();
   const navigate = useNavigate();
 
+  const [error,setError] = useState('');
 
   const formik = useFormik({
     initialValues: {
@@ -25,14 +26,23 @@ function LogInForm() {
     onSubmit: async values => {
       const { email, password } = values;
       // console.log(values.email)
-
-
       try {
 
+        setError('');
         await login(email, password);
+
         navigate('/');
       } catch (e) {
-        console.log(e)
+        if(e.code === 'auth/invalid-credential'){
+
+          setError('Invalid Email or Password');
+
+        }
+
+        
+        else if(e.code === 'auth/too-many-requests'){
+          setError("Too many requests, try again.")
+      }
     }
 
     },
@@ -59,6 +69,13 @@ function LogInForm() {
 
         <h1 className='title-form' >Log In</h1>
         <form onSubmit={formik.handleSubmit} >
+
+          {
+            error && 
+            <div className="error-firebase">
+            <p>{error}</p>
+          </div>
+          }
 
           <div className="input-group">
             <input type="text"
