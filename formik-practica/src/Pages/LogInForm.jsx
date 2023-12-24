@@ -5,7 +5,7 @@ import { useFormik } from 'formik';
 import { validate } from '../Validation';
 
 import '../Styles/Form.css';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../contexts/UseAuth';
 
@@ -59,6 +59,11 @@ function LogInForm() {
     setError('');
   };
 
+
+  useEffect(() => {
+    document.title = 'CurriFacil - Login';
+  }, []);
+
   // const handleSubmit = (e) => {
   //   e.preventDefault();
   // }
@@ -70,7 +75,11 @@ function LogInForm() {
       </div>
       <div className='form-card'>
 
+        <div className="card-title-img">
         <h1 className='title-form' >Log In</h1>
+        <img src="./CurriFacil-logos_transparent.png" alt="cv image" width="140px" />
+        </div>
+
         <form onSubmit={formik.handleSubmit} >
 
           {

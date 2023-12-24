@@ -4,7 +4,7 @@ import { useFormik } from 'formik';
 import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 
 import { validate } from '../Validation';
@@ -52,6 +52,10 @@ function SignUpForm() {
     const handleShowPassword = () => {
         setShow(!show);
     }
+
+    useEffect(() => {
+        document.title = 'CurriFacil - Sign Up';
+      }, []);
 
 
 
