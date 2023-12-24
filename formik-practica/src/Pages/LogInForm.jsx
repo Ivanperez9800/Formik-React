@@ -15,7 +15,7 @@ function LogInForm() {
   const { login } = useAuth();
   const navigate = useNavigate();
 
-  const [error,setError] = useState('');
+  const [error, setError] = useState('');
 
   const formik = useFormik({
     initialValues: {
@@ -33,17 +33,17 @@ function LogInForm() {
 
         navigate('/');
       } catch (e) {
-        if(e.code === 'auth/invalid-credential'){
+        if (e.code === 'auth/invalid-credential') {
 
           setError('Invalid Email or Password');
 
         }
 
-        
-        else if(e.code === 'auth/too-many-requests'){
+
+        else if (e.code === 'auth/too-many-requests') {
           setError("Too many requests, try again.")
+        }
       }
-    }
 
     },
   });
@@ -76,17 +76,17 @@ function LogInForm() {
       <div className='form-card'>
 
         <div className="card-title-img">
-        <h1 className='title-form' >Log In</h1>
-        <img src="./CurriFacil-logos_transparent.png" alt="cv image" width="140px" />
+          <h1 className='title-form' >Log In</h1>
+          <img src="./CurriFacil-logos_transparent.png" alt="cv image" width="140px" />
         </div>
 
         <form onSubmit={formik.handleSubmit} >
 
           {
-            error && 
+            error &&
             <div className="error-firebase">
-            <p>{error}</p>
-          </div>
+              <p>{error}</p>
+            </div>
           }
 
           <div className="input-group">
@@ -96,7 +96,7 @@ function LogInForm() {
               name='email'
               onChange={formik.handleChange}
               value={formik.values.email || ''}
-              onFocus={handleInputFocus} 
+              onFocus={handleInputFocus}
               autoComplete='off'
               aria-label='email'
             />
@@ -113,7 +113,7 @@ function LogInForm() {
                   placeholder='***********'
                   onChange={formik.handleChange}
                   value={formik.values.password || ''}
-                  onFocus={handleInputFocus} 
+                  onFocus={handleInputFocus}
                   autoComplete='off'
                   aria-label='password'
                 />
@@ -132,8 +132,8 @@ function LogInForm() {
             {formik.errors.password ? <p className='error' >{formik.errors.password}</p> : null}
           </div>
           <div className="button-group">
-            <button type='submit'  disabled={cantErrors} className={!cantErrors ? "submit" : ""}  >Log In</button>
-            <p>Do you have an account?<Link to ="/register">Sign Up Here</Link> </p>
+            <button type='submit' disabled={cantErrors} className={!cantErrors ? "submit" : ""}  >Log In</button>
+            <p>Do you have an account?<Link to="/register">Sign Up Here</Link> </p>
           </div>
         </form>
       </div>

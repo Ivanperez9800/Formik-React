@@ -55,7 +55,7 @@ function SignUpForm() {
 
     useEffect(() => {
         document.title = 'CurriFacil - Sign Up';
-      }, []);
+    }, []);
 
 
 
@@ -67,7 +67,11 @@ function SignUpForm() {
             </div>
             <div className='form-card'>
 
-                <h1 className='title-form' >Register</h1>
+                <div className="card-title-img">
+                    <h1 className='title-form' >Register</h1>
+                    <img src="./CurriFacil-logos_transparent.png" alt="cv image" width="140px" />
+                </div>
+
                 <form onSubmit={formik.handleSubmit} >
 
                     {
