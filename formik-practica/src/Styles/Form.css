@@ -169,7 +169,7 @@ button:hover.show {
         flex-direction: column;
     }
 
-    .input-group{
+    form{
         margin: 5px;
     }
 }
