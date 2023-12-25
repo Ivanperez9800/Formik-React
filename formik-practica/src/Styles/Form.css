@@ -146,7 +146,7 @@ button:hover.show {
         flex-direction: column;
     }
     .card-title-img img{
-        display: block;
+        display: inline-block;
         width: 150px;
     }
 
