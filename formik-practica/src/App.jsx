@@ -5,6 +5,7 @@ import { BrowserRouter } from "react-router-dom";
 
 import AuthProvider from './contexts/Authtentication';
 
+
 import ProtectedRoutes from './components/ProtectedRoutes'
 import Home from './components/Home'
 
