@@ -98,7 +98,7 @@ function BaseForm({ title, imageSrc, buttonText, onSubmit, error }) {
 
                         {/* <p>Do you have an account?<Link to="/login">Login Here</Link> </p>*/}
                         {
-                            title === 'Login' ? <p>Dont you have an account?<Link to="/register">Register Here</Link> </p>
+                            title === 'Login' ? <p>Don't you have an account?<Link to="/register">Register Here</Link> </p>
                             :
                             <p>Do you have an account? <Link to="/login">Login Here</Link> </p>
                         }
