@@ -1,13 +1,14 @@
-import './App.css'
 
 import { Routes, Route } from "react-router-dom"
 import { BrowserRouter } from "react-router-dom";
-import SignUpForm from './Pages/SignUpForm';
-import LogInForm from './Pages/LogInForm';
+
+
 import AuthProvider from './contexts/Authtentication';
 
 import ProtectedRoutes from './components/ProtectedRoutes'
 import Home from './components/Home'
+import SignUpForm from './pages/SignUpForm';
+import LogInForm from './pages/LogInForm';
 
 function App() {
 

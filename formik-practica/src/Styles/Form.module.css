@@ -1,25 +1,23 @@
 
 
-
-
-.main-card {
+.main_card {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.card-title-img{
+.card_title_img{
     display: flex;
     justify-content: center;
     /* align-items: center; */
 }
 
-.card-title-img img{
+.card_title_img img{
     width: 120px;
     display: none;
 }
 
-.card-title-img .title-form {
+.card_title_img .title_form {
     font-size: 2.8em;
     /* text-align: center; */
     margin-bottom: 10px;
@@ -28,26 +26,26 @@
 }
 
 
-.banner-card {
+.banner_card {
     display: flex;
     justify-content: center;
     height: 100vh;
     align-items: center;
 }
 
-.input-group {
+.input_group {
     margin-bottom: 10px;
     display: flex;
     flex-direction: column;
 }
 
-.input-group .error {
+.input_group .error {
     color: red;
     margin-left: 5px;
     margin-top: 5px;
 }
 
-.input-group input {
+.input_group input {
     padding: 10px;
     font-size: 1.3em;
     border: 1px solid rgba(29, 83, 29, 0.74);
@@ -55,13 +53,13 @@
     padding-right: 50px;
 }
 
-.button-group {
+.button_group {
     width: 100%;
     text-align: center;
     margin-top: 20px;
 }
 
-.button-group button {
+.button_group button {
     font-size: 1.2em;
     padding: 5px;
     border: 1px solid rgb(15, 63, 19);
@@ -71,34 +69,34 @@
     color: rgb(2, 21, 126);
 }
 
-.button-group button:hover {
+.button_group button:hover {
     cursor: pointer;
 }
 
-.button-group p {
+.button_group p {
     text-align: justify;
     margin-left: 5px;
     margin-top: 5px;
     font-size: 1.1em;
 }
 
-.button-group a {
+.button_group a {
     text-decoration: none;
     color: green;
     margin-left: 5px;
     font-size: 1.2em;
 }
 
-.button-group button:disabled {
+.button_group button:disabled {
     background-color: #c0c0c0; /* Cambia el color de fondo cuando está desactivado */
     opacity: 0.8; /* Reduce la opacidad cuando está desactivado */
     cursor: not-allowed; /* Cambia el cursor a "no permitido" cuando está desactivado */
 }
-/*---------------------------------------*/
+/*-*/
 
 
 
-.password-input-container {
+.password_input_container {
     position: relative;
 }
 
@@ -120,7 +118,7 @@ button:hover.show {
 
 /*ESTILOS ERROR FIREBASE*/
 
-.error-firebase{
+.error_firebase{
     background-color: red;
     border-radius: 5px;
     padding: 10px;
@@ -136,38 +134,36 @@ button:hover.show {
 
 /*ESTILOS RESPONSIVE*/
 @media only screen and (max-width: 767px) {
-    .banner-card {
+    .banner_card {
         display: none;
         /* background-color: red; */
     }
 
 
-    .card-title-img {
+    .card_title_img {
         flex-direction: column;
     }
-    .card-title-img img{
+    .card_title_img img{
         display: inline-block;
         width: 150px;
     }
 
-    .card-title-img .title-form {
+    .card_title_img .title_form {
         text-align: center;
     }
 
-    .main-card {
+    .main_card {
         height: 100vh;
     }
 
-    .form-card {
+    .form_card {
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
     }
 
-    .main-card{
+    .main_card{
         margin: 10px;
     }
 }
-
-
