@@ -13,28 +13,28 @@ function BaseForm({ title, imageSrc, buttonText, onSubmit, error }) {
 
     const formik = useFormik({
         initialValues: {
-          email: '',
-          password: ''
+            email: '',
+            password: ''
         },
         validate,
         onSubmit,
-      });
-    
-      const [show, setShow] = useState(false);
-      const cantErrors = Object.keys(formik.errors).length > 0;
-    
-      const handleShowPassword = () => {
+    });
+
+    const [show, setShow] = useState(false);
+    const cantErrors = Object.keys(formik.errors).length > 0;
+
+    const handleShowPassword = () => {
         setShow(!show);
-      };
-    
-      useEffect(() => {
+    };
+
+    useEffect(() => {
         document.title = `CurriFacil - ${title}`;
-      }, [title]);
+    }, [title]);
 
     return (
         <div className={form.main_card}>
             <div className={form.banne_rcard}>
-            <img src={imageSrc} alt="cv image" width="580px" />
+                <img src={imageSrc} alt="cv image" width="580px" />
             </div>
             <div className={form.form_card}>
 
@@ -98,9 +98,11 @@ function BaseForm({ title, imageSrc, buttonText, onSubmit, error }) {
 
                         {/* <p>Do you have an account?<Link to="/login">Login Here</Link> </p>*/}
                         {
-                            title === 'Login' ? <p>Dont you have an account?<Link to="/register">Register Here</Link> </p>
-                            :
-                            <p>Do you have an account? <Link to="/login">Login Here</Link> </p>
+                            title === 'Login' ? (
+                                <p>Don't you have an account?<Link to="/register">Register Here</Link></p>
+                            ) : (
+                                <p>Do you have an account? <Link to="/login">Login Here</Link></p>
+                            )
                         }
                     </div>
                 </form>
