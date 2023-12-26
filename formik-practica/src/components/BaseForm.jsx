@@ -27,6 +27,8 @@ function BaseForm({ title, imageSrc, buttonText, onSubmit, error }) {
         setShow(!show);
     };
 
+    console.log(title)
+
     useEffect(() => {
         document.title = `CurriFacil - ${title}`;
     }, [title]);
