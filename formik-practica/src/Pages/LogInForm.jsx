@@ -94,6 +94,7 @@ function LogInForm() {
   }
 
   return (
+   
     // <div className='main-card'>
     //   <div className='banner-card'>
     //     <img src="./Login-banner-photo.jpg" alt="cv image" width="580px" />
@@ -164,13 +165,15 @@ function LogInForm() {
     //   </div>
     // </div>
 
-    <BaseForm 
-      title="Login"
-      imageSrc="./Login-banner-photo.jpg"
-      buttonText="Log in"
-      onSubmit={onSubmit}
-      error={error}
-    />
+    // <BaseForm 
+    //   title="Login"
+    //   imageSrc="./Login-banner-photo.jpg"
+    //   buttonText="Log in"
+    //   onSubmit={onSubmit}
+    //   error={error}
+    // />
+
+    <p>Login</p>
 
   )
 }

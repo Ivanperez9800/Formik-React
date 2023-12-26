@@ -37,13 +37,15 @@ function SignUpForm() {
 
     return (
 
-        <BaseForm
-        title="Register"
-        imageSrc="/vecteezy_vector-concept-illustration-specialists-choosing-best_7938811.jpg"
-        buttonText="Sign Up"
-        onSubmit={onSubmit}
-        error={error}
-        />
+        // <BaseForm
+        // title="Register"
+        // imageSrc="/vecteezy_vector-concept-illustration-specialists-choosing-best_7938811.jpg"
+        // buttonText="Sign Up"
+        // onSubmit={onSubmit}
+        // error={error}
+        // />
+
+        <p>Hello</p>
 
     )
 }
