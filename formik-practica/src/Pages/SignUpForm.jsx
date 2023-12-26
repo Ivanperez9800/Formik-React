@@ -22,42 +22,6 @@ function SignUpForm() {
     const { signUp } = useAuth();
     const [error, setError] = useState('');
 
-    // const formik = useFormik({
-    //     initialValues: {
-    //         email: '',
-    //         password: ''
-    //     },
-    //     validate,
-    //     onSubmit: async values => {
-    //         /*Aca mandar a firebase*/
-    //         const { email, password } = values
-    //         // console.log(email,password)
-    //         try {
-    //             await signUp(email, password);
-    //             navigate('/');
-    //         } catch (e) {
-    //             if (e.code === 'auth/email-already-in-use') {
-    //                 setError('Email already in use')
-    //             }
-    //         }
-
-    //     },
-    // });
-
-
-    // const [show, setShow] = useState(false);
-
-    // const cantErrors = Object.keys(formik.errors).length > 0;
-
-    // const handleShowPassword = () => {
-    //     setShow(!show);
-    // }
-
-    // useEffect(() => {
-    //     document.title = 'CurriFacil - Sign Up';
-    // }, []);
-
-
     const onSubmit = async (values) => {
         const { email, password } = values;
         try {

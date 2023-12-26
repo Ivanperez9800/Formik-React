@@ -30,7 +30,7 @@ function BaseForm({ title, imageSrc, buttonText, onSubmit, error }) {
     console.log(title)
 
     useEffect(() => {
-        document.title = `CurriFacil - ${title}`;
+        document.title = `CurriFacil - titulo`;
     }, [title]);
 
     return (
