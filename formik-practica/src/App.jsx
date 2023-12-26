@@ -6,7 +6,7 @@ import { BrowserRouter } from "react-router-dom";
 import AuthProvider from './contexts/Authtentication';
 
 
-import ProtectedRoutes from './components/ProtectedRoutes'
+// import ProtectedRoutes from './components/ProtectedRoutes'
 import Home from './components/Home'
 
 import Prueba from './components/Prueba'
@@ -26,16 +26,16 @@ function App() {
         <BrowserRouter>
           <Routes>
 
-            <Route path="/" element={
+            {/* <Route path="/" element={
               <ProtectedRoutes>
                 <Home />
               </ProtectedRoutes>
 
-            } />
+            } /> */}
 
             {/* <Route path="/login" element={<LogInForm />} /> */}
 
-            <Route path="/register" element={<Prueba />} />
+            <Route path="/" element={<Prueba />} />
             {/* La siguiente línea establece "/Login" como la página inicial */}
             {/* <Route index element={<LogInForm />} /> */}
           </Routes>
