@@ -8,9 +8,10 @@ import AuthProvider from './contexts/Authtentication';
 
 import ProtectedRoutes from './components/ProtectedRoutes'
 import Home from './components/Home'
+import Prueba from "./components/prueba";
 
 // import LogInForm from "./pages/LogInForm";
-import SignUpForm from "./pages/SignUpForm";
+// import SignUpForm from "./pages/SignUpForm";
 
 function App() {
 
@@ -31,7 +32,7 @@ function App() {
 
             {/* <Route path="/login" element={<LogInForm />} /> */}
 
-            <Route path="/register" element={<SignUpForm />} />
+            <Route path="/register" element={<Prueba />} />
             {/* La siguiente línea establece "/Login" como la página inicial */}
             {/* <Route index element={<LogInForm />} /> */}
           </Routes>
