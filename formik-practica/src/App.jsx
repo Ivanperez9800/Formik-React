@@ -9,8 +9,9 @@ import ProtectedRoutes from './components/ProtectedRoutes'
 import Home from './components/Home'
 
 
-import SignUpForm from "./pages/SignUpForm";
+
 import LogInForm from "./pages/LogInForm";
+import SignUpForm from "./pages/SignUpForm";
 
 function App() {
 
