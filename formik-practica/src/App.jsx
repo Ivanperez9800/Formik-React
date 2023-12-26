@@ -9,7 +9,7 @@ import AuthProvider from './contexts/Authtentication';
 import ProtectedRoutes from './components/ProtectedRoutes'
 import Home from './components/Home'
 
-import LogInForm from "./pages/LogInForm";
+// import LogInForm from "./pages/LogInForm";
 import SignUpForm from "./pages/SignUpForm";
 
 function App() {
@@ -29,7 +29,7 @@ function App() {
 
             } />
 
-            <Route path="/login" element={<LogInForm />} />
+            {/* <Route path="/login" element={<LogInForm />} /> */}
 
             <Route path="/register" element={<SignUpForm />} />
             {/* La siguiente línea establece "/Login" como la página inicial */}
