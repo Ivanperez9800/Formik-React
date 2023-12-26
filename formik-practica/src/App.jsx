@@ -22,7 +22,7 @@ function App() {
   return (
     <>
 
-      <AuthProvider>
+      {/* <AuthProvider> */}
         <BrowserRouter>
           <Routes>
 
@@ -40,7 +40,7 @@ function App() {
             {/* <Route index element={<LogInForm />} /> */}
           </Routes>
         </BrowserRouter>
-      </AuthProvider>
+      {/* </AuthProvider> */}
 
 
 
