@@ -29,10 +29,6 @@ function BaseForm({ title, imageSrc, buttonText, onSubmit, error }) {
 
     console.log(title)
 
-    useEffect(() => {
-        document.title = `CurriFacil - titulo`;
-    }, [title]);
-
     return (
         <div className={form.main_card}>
             <div className={form.banne_rcard}>
