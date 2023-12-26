@@ -8,7 +8,9 @@ import AuthProvider from './contexts/Authtentication';
 
 import ProtectedRoutes from './components/ProtectedRoutes'
 import Home from './components/Home'
-import Prueba from "./components/Prueba";
+
+import Prueba from './components/Prueba'
+
 
 
 // import LogInForm from "./pages/LogInForm";
