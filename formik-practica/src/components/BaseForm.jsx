@@ -37,6 +37,7 @@ function BaseForm({ title, imageSrc, buttonText, onSubmit, error }) {
             <div className={form.banne_rcard}>
                 <img src={imageSrc} alt="cv image" width="580px" />
             </div>
+            
             <div className={form.form_card}>
 
                 <div className={form.card_title_img}>
