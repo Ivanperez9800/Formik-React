@@ -27,7 +27,10 @@ function BaseForm({ title, imageSrc, buttonText, onSubmit, error }) {
         setShow(!show);
     };
 
-    console.log(title)
+
+    useEffect(() => {
+        document.title = `CurriFacil - titulo`;
+    }, [title]);
 
     return (
         <div className={form.main_card}>
